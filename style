@@ -1,0 +1,24 @@
+h1 {
+    color: navy;
+    margin: auto;
+    width: 70%;
+}
+body {
+    background-color: lightgrey;
+    background-image: url("");
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+}
+li {
+    float: left;
+}
+li a {
+    display: inline;
+    display: block;
+    width: 60px;
+    padding-left: 10px, 10px, 10px, 10px;
+}
