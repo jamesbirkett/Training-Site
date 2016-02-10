@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<title>
+  My first tracker
+</title>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<h1>
+  Workout Tracker
+</h1>
+<hr>
+  <body>
+    <form action="insert.php" method="post">
+      Pushup: <input type="number" name="pushup" value=""><input type= "hidden" name="exercise_id_1" value="1"></br></br>
+      Situp: <input type="number" name="situp" value=""><input type= "hidden" name="exercise_id_2" value="2"></br></br>
+      <!-- Squat: <input type="number" name="squat" value=""><input type= "hidden" name="exercise_id_3" value="3"></br></br>
+      Pullup: <input type="number" name="pullup" value=""><input type= "hidden" name="exercise_id_4" value="4"></br></br>
+      Ab roller: <input type="number" name="ab_roller" value=""><input type= "hidden" name="exercise_id_5" value="5"></br></br>
+      Leg raise: <input type="number" name="leg_raise" value=""><input type= "hidden" name="exercise_id_6" value="6"></br></br>
+      Swing: <input type="number" name="swing" value=""><input type= "hidden" name="exercise_id_7" value="7"></br></br> -->
+      <input type="submit">
+    </form>
+  </body>
+<hr>
+  <ul>
+    <li> <a href="http://trainer.com/Page.html">Entry</a></li>
+    <li><a href="http://trainer.com/Results.html">Results</a></li>
+  </ul>
+</html>
