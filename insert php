@@ -1,0 +1,39 @@
+<html>
+<body>
+<?php
+$link = mysql_connect("trainer.com","root","password");
+if (!$link)
+  {
+  echo "Error: Unable to connect to MySQL." . PHP_EOL;
+  }
+mysql_select_db("training", $link);
+
+$pushup = mysql_real_escape_string ($_POST['pushup']);
+$situp = mysql_real_escape_string ($_POST['situp']);
+$squat = mysql_real_escape_string ($_POST['squat']);
+$pullup = mysql_real_escape_string ($_POST['pullup']);
+$ab_roller = mysql_real_escape_string ($_POST['ab_roller']);
+$swing = mysql_real_escape_string ($_POST['swing']);
+$leg_raise = mysql_real_escape_string ($_POST['leg_raise']);
+
+$sql="INSERT INTO t_count (count, exercise_id) VALUES ('$_POST[pushup]','$_POST[exercise_id_1]')";
+$sql="INSERT INTO t_count (count, exercise_id) VALUES ('$_POST[situp]','$_POST[exercise_id_2]')";
+// $sql="INSERT INTO t_count (count, exercise_id) VALUES ('$_POST[squat]','$_POST[exercise_id_3]')";
+// $sql="INSERT INTO t_count (count, exercise_id) VALUES ('$_POST[pullup]','$_POST[exercise_id_4]')";
+// $sql="INSERT INTO t_count (count, exercise_id) VALUES ('$_POST[ab_roller]','$_POST[exercise_id_5]')";
+// $sql="INSERT INTO t_count (count, exercise_id) VALUES ('$_POST[leg_raise]','$_POST[exercise_id_6]')";
+// $sql="INSERT INTO t_count (count, exercise_id) VALUES ('$_POST[swing]','$_POST[exercise_id_7]')";
+
+if (!mysql_query($sql,$link))
+  {
+  die('Error: unable to insert' . mysql_error());
+  }
+
+echo "Records added";
+
+header('Refresh: 2; URL= Results.html');
+
+mysql_close($link)
+?>
+</body>
+</html>
